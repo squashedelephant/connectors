@@ -151,8 +151,8 @@ class SQSConnector:
             return err_msg
         try:
             self.item = mq.receive_messages(MaxNumberOfMessages=1,
-                                            VisibilityTimeout=10
-                                            WaitTimeSeconds=10):
+                                            VisibilityTimeout=10,
+                                            WaitTimeSeconds=10)
             metadata = self.item[0].message_attributes.get('metadata')
             body = self.item[0].body
             self.item[0].delete()
