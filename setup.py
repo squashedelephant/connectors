@@ -6,7 +6,7 @@ from os.path import exists, join
 packages = [d for d,_,__ in walk('connectors') if exists(join(d,'__init__.py'))]
 
 setup(
-    version='0.1.0',
+    version='0.1.1',
     name='connectors',
     description='libraries shared by micro services to access remote services',
     maintainer='squashedelephant',
